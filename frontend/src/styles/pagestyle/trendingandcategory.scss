@@ -1,0 +1,186 @@
+.frame-section{
+    position: relative;
+    height: 600px; 
+    width: 100%;
+    background: var(--background-box);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 50px;
+    .col1 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: fit-content;
+
+        .hot-recipe {
+            background-color: var(--background-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto;
+            max-width: fit-content;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+
+        .recipe-title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .tags {
+            display: flex;
+            gap: 15px;
+
+            .tag {
+                display: flex;
+                align-items: center;
+                background-color: #f0f0f0;
+                padding: 10px 10px;
+                border-radius: 15px;
+                font-size: 15px;
+                width: 120px; 
+                min-width: 120px; 
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                margin-top: 20px;
+            }
+        }
+
+        .description {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .author-photo {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .author-name {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .publish-date {
+                font-size: 0.875rem;
+                color: #999;
+            }
+        }
+
+        .view-recipes {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            max-width: fit-content;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: var(--background-light);
+            }
+        }
+    }
+
+    .col2 {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .dish-image {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.categories-section {
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    .categories-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }     
+    }
+}
+
+.view-all-button {
+    background-color: #eaf8fc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+    background-color: #d2f0f8;
+}
+
+.categories-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.category-card {
+    background-color: #fefefecc;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    text-align: center;
+    flex: 1;
+    width: 120px;
+    height: 200px;
+    .category-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}

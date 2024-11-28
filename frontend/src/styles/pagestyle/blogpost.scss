@@ -1,0 +1,407 @@
+.blog-post-container {
+    padding: 2rem;
+
+    .blog-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .article-card {
+        display: flex;
+        align-items: flex-start;
+        border-radius: 8px;
+        padding: 1rem;
+
+        .article-image-container {
+            position: relative;
+            margin-right: 1.5rem;
+
+            .blog-recipe-image {
+                width: 330px;
+                height: 210px;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+
+            .like-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #ccc;
+                cursor: pointer;
+                font-size: 1.2rem;
+
+                &.liked {
+                    color: red;
+                }
+            }
+        }
+
+        .blog-content {
+            flex: 1;
+
+            .blog-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .blog-description {
+                font-size: 0.95rem;
+                color: #666;
+                margin: 0.5rem 0 1rem;
+                line-height: 1.4;
+            }
+
+            .author-info-blog {
+                margin-top: 55px;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.9rem;
+                color: #999;
+
+                .author-image-blog {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            background-color: #f3f3f3;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+
+            &.active {
+                background-color: #333;
+                color: #fff;
+            }
+        }
+    }
+}
+.blog-post-article {
+    max-width: 1800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ddd;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+.article-image-full {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.article-details {
+    text-align: center;
+    .questions{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .answers{
+        font-size: 17px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: var(--text-light);
+    }
+    .lady-image{
+        width: 800px;
+        height: 300px;
+        margin-bottom: 25px;
+    }
+    .quote{
+        font-size: 20px;
+        font-style: italic;
+        margin-top: 80px;
+        font-weight: lighter;  
+    }
+    .quote-author{
+        font-style: oblique;
+        font-weight: lighter;
+    }
+}
+ 
+@media (max-width: 1024px) {
+    .blog-post-container {
+        padding: 1.5rem;
+    }
+
+    .article-card {
+        flex-direction: column;
+        align-items: center;
+
+        .article-image-container {
+            margin-right: 0;
+            margin-bottom: 1rem;
+
+            .blog-recipe-image {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+
+        .blog-content {
+            text-align: center;
+
+            .blog-title {
+                font-size: 1.1rem;
+            }
+
+            .blog-description {
+                font-size: 0.9rem;
+            }
+
+            .author-info-blog {
+                margin-top: 30px;
+                font-size: 0.85rem;
+
+                .author-image-blog {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        button {
+            padding: 0.4rem 0.8rem;
+        }
+    }
+
+    .blog-post-article {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .article-details .questions {
+        font-size: 22px;
+    }
+
+    .article-details .answers {
+        font-size: 15px;
+    }
+
+    .article-details .lady-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-details .quote {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post-container {
+        padding: 1rem;
+    }
+
+    .article-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .article-image-container {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            margin-left: 50px;
+
+            .blog-recipe-image {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+
+        .blog-content {
+            text-align: center;
+
+            .blog-title {
+                font-size: 1rem;
+            }
+
+            .blog-description {
+                font-size: 0.85rem;
+            }
+
+            .author-info-blog {
+                margin-top: 20px;
+                font-size: 0.8rem;
+                justify-content: center;
+
+                .author-image-blog {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        button {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    .blog-post-article {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .article-details .questions {
+        font-size: 20px;
+    }
+
+    .article-details .answers {
+        font-size: 14px;
+    }
+
+    .article-details .lady-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-details .quote {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post-container {
+        padding: 1rem;
+    }
+
+    .article-card {
+        flex-direction: column;
+        align-items: center;
+
+        .article-image-container {
+            margin-right: 0;
+            margin-bottom: 1rem;
+
+            .blog-recipe-image {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+            }
+        }
+
+        .blog-content {
+            text-align: center;
+
+            .blog-title {
+                font-size: 0.9rem;
+            }
+
+            .blog-description {
+                font-size: 0.8rem;
+            }
+
+            .author-info-blog {
+                margin-top: 15px;
+                font-size: 0.75rem;
+
+                .author-image-blog {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        button {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    .blog-post-article {
+        padding: 0.75rem;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .article-details .questions {
+        font-size: 18px;
+    }
+
+    .article-details .answers {
+        font-size: 13px;
+    }
+
+    .article-details .lady-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .article-details .quote {
+        font-size: 14px;
+    }
+}
