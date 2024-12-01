@@ -1,2 +1,0 @@
-# Foodieland
-Minor Project
