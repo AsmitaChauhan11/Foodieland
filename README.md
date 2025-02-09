@@ -1,6 +1,9 @@
-
-https://github.com/user-attachments/assets/b211b609-285c-47a5-8718-ee1f06245380
 Smart Recipe Finder - Foodieland 
 
 
-Uploading 8d42a02a-a2fc-3ae1-7356-b6db104df51d_custom.mp4…
+
+
+
+
+https://github.com/user-attachments/assets/3be6f37c-0a67-4a4b-a753-fb262dfeee0f
+
