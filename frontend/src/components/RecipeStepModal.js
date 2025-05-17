@@ -28,7 +28,7 @@ function RecipeStepModal({ id, title }) {
     const fetchSteps = async () => {
       try {
         const response = await fetch(
-          `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${API_KEY}&includeNutrition=true`
+          `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${API_KEY}&cuisine=Indian&includeNutrition=true`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -40,7 +40,7 @@ function RecipeStepModal({ id, title }) {
       }
     };
     fetchSteps();
-  }, []);
+  }, [id]);
 
   return (
     <Box sx={style}>

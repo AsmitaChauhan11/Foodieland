@@ -25,12 +25,62 @@ export default function Recipes() {
     window.print();
   };
 
+  // const handleSearch = () => {
+  //   if (searchTerm.trim() !== "") {
+  //     async function fetchRecipes() {
+  //       try {
+  //         const response = await fetch(
+  //           `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchTerm}&number=3&apiKey=${API_KEY}&includeNutrition=true`
+  //         );
+  //         if (!response.ok) {
+  //           throw new Error(
+  //             "Network response was not ok " + response.statusText
+  //           );
+  //         }
+  //         const data = await response.json();
+  //         setRecipes(data);
+  //       } catch (error) {
+  //         console.error("There was a problem with the fetch operation:", error);
+  //       }
+  //     }
+  //     fetchRecipes();
+  //   } else {
+  //     alert("Please enter an ingredient to search.");
+  //   }
+  // };
+
+  const restrictedCombinations = [
+    ["milk", "lemon"],
+    ["milk", "red pepper"],
+    ["honey", "tofu"],
+    ["fish", "milk"],
+    ["curd", "onion"],
+    ["milk", "salt"],
+  ];
+
+  const checkRestrictedCombination = (ingredients) => {
+    for (let pair of restrictedCombinations) {
+      if (pair.every((item) => ingredients.includes(item.toLowerCase()))) {
+        alert(`No recipe found for ${pair.join(" and ")}`);
+        return true;
+      }
+    }
+    return false;
+  };
+
   const handleSearch = () => {
     if (searchTerm.trim() !== "") {
+      const ingredients = searchTerm
+        .toLowerCase()
+        .split(",")
+        .map((item) => item.trim());
+
+      if (checkRestrictedCombination(ingredients)) return; // Stop the API call if restricted
+
       async function fetchRecipes() {
         try {
           const response = await fetch(
-            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchTerm}&number=3&apiKey=${API_KEY}&includeNutrition=true`
+            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchTerm}&number=3&apiKey=${API_KEY}&cuisine=Indian&includeNutrition=true`
           );
           if (!response.ok) {
             throw new Error(
@@ -85,6 +135,35 @@ export default function Recipes() {
           />
         ))}
       </Box>
+
+      <div className="order-now-section">
+        <h3 className="order-question">Don't have the ingredients?</h3>
+        <h3 className="order-call">ORDER NOW</h3>
+        <div className="delivery-options">
+          <a
+            href="https://www.zeptonow.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/zepto.jpeg"
+              alt="Order from Zepto"
+              className="delivery-logo"
+            />
+          </a>
+          <a
+            href="https://www.blinkit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/blinkit.jpg"
+              alt="Order from Blinkit"
+              className="delivery-logo"
+            />
+          </a>
+        </div>
+      </div>
     </>
   );
 }

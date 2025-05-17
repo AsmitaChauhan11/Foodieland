@@ -37,7 +37,6 @@ a{
 @import "pagestyle/faq.scss";
 @import "pagestyle/signin.scss";
 
-
 .search-container {
     display: flex;
     align-items: center;
@@ -149,6 +148,59 @@ a{
     text-align: center;
   }
   
+.order-now-section {
+  text-align: center;
+  margin: 3rem 0;
+  font-family: 'Poppins', sans-serif;
+
+  .order-question {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .order-call {
+    font-size: 2rem;
+    color: #ff5722;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .delivery-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    a {
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .delivery-logo {
+        width: 100px;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+  
+
+
+
+
+
+
+
+
+
+
 
 
 

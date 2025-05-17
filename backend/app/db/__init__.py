@@ -16,3 +16,4 @@ def init_db(app):
     Session = scoped_session(sessionmaker(bind=engine))
     Base.metadata.create_all(engine)
     logger.info('Database initialized')
+

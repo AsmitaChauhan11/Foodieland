@@ -99,3 +99,4 @@ def verify_user(email, password):
         return None
     finally:
         session.close()
+

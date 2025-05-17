@@ -11,6 +11,7 @@ import SignIn from "./pages/SignIn";
 import Profile from "./pages/Profile";
 import FAQ from "./components/FAQ";
 import Register from "./pages/Register";
+import Categories from "./pages/Categories";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
       <Footer />
